@@ -7,7 +7,9 @@ barramenu = Menu(raiz)
 
 bddmenu = Menu(barramenu,tearoff=False)
 barramenu.add_command(label='BBDD')
-barramenu.add_command(label='SALIR')
+barramenu.add_command(label='Limpiar')
+barramenu.add_command(label='Ayuda')
+
 
 raiz.config(menu = barramenu)
 
