@@ -5,29 +5,38 @@ raiz.title('Python CRUD ')
 #MENU
 barramenu = Menu(raiz)
 
-bddmenu = Menu(barramenu,tearoff=False)
-barramenu.add_command(label='BBDD')
-barramenu.add_command(label='Limpiar')
-barramenu.add_command(label='Ayuda')
+bbddmenu = Menu(barramenu,tearoff=False)
+bbddmenu.add_command(label='Conectar')
+bbddmenu.add_command(label='Salir')
 
+borrarmenu = Menu(barramenu,tearoff=False)
+borrarmenu.add_command(label='Limpiar')
+
+ayudamenu = Menu(barramenu,tearoff=False)
+ayudamenu.add_command(label='Licencia')
+ayudamenu.add_command(label='Acerva de...')
+
+barramenu.add_cascade(label='BBDD',menu=bbddmenu)
+barramenu.add_cascade(label='Limpiar',menu=borrarmenu)
+barramenu.add_cascade(label='Ayuda',menu=ayudamenu)
 
 raiz.config(menu = barramenu)
 
 #CAMPOS FORMULARIO
 framecampos = Frame(raiz)
 
-#VARIABLES ENTRADA
+#variables de entrada
 legajo = StringVar()
 alumno = StringVar()
 
-#INPUTS
+#inputs
 legajo_input = Entry(framecampos,textvariable = legajo)
 legajo_input.grid(row=0, column=1,padx=10,pady=10)
 
 legajo_input = Entry(framecampos,textvariable = alumno)
 legajo_input.grid(row=1, column=1,padx=10,pady=10)
 
-#LABELS
+#labels
 legajolabel = Label(framecampos,text='Legajo:') 
 legajolabel.grid(row=0, column=0,sticky="w",padx=10, pady=10)
 
