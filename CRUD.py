@@ -14,7 +14,7 @@ borrarmenu.add_command(label='Limpiar')
 
 ayudamenu = Menu(barramenu,tearoff=False)
 ayudamenu.add_command(label='Licencia')
-ayudamenu.add_command(label='Acerva de...')
+ayudamenu.add_command(label='Acerca de...')
 
 barramenu.add_cascade(label='BBDD',menu=bbddmenu)
 barramenu.add_cascade(label='Limpiar',menu=borrarmenu)
